@@ -1,0 +1,20 @@
+name: Simple C++ CI
+
+on: [push]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Install Doxygen
+        run: sudo apt-get update && sudo apt-get install -y doxygen graphviz
+      - name: Compile Application
+        run: g++ -o fraction_app fraction.cpp main.cpp
+      - name: Compile Tests
+        run: g++ -o test_app fraction.cpp test.cpp
+      - name: Run Tests
+        run: ./test_app
+      - name: Generate Documentation
+        run: doxygen Doxyfile
