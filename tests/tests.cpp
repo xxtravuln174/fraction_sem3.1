@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
 #include <iostream>
 #include <cassert>
-#include "fraction.h"
+#include "../include/fraction.h"
 
 using namespace std;
 
