@@ -8,8 +8,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      - name: Install Doxygen
-        run: sudo apt-get update && sudo apt-get install -y doxygen graphviz
+      - name: Install req.
+        run: sudo apt-get update && sudo apt-get install -y doxygen graphviz libgtest-dev cmake build-essential
       - name: Compile Application
         run: g++ -o fraction_app src/fraction.cpp src/main.cpp
       - name: Compile Tests
