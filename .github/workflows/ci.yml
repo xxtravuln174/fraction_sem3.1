@@ -11,9 +11,9 @@ jobs:
       - name: Install Doxygen
         run: sudo apt-get update && sudo apt-get install -y doxygen graphviz
       - name: Compile Application
-        run: g++ -o fraction_app fraction.cpp main.cpp
+        run: g++ -o fraction_app src/fraction.cpp src/main.cpp
       - name: Compile Tests
-        run: g++ -o test_app fraction.cpp test.cpp
+        run: g++ -o test_app src/fraction.cpp tests/tests.cpp
       - name: Run Tests
         run: ./test_app
       - name: Generate Documentation
