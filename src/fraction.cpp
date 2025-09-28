@@ -1,4 +1,4 @@
-#include "fraction.h"
+#include "../include/fraction.h"
 #include <iostream>
 #include <stdexcept>
 #include <cmath>

@@ -1,5 +1,5 @@
 #include <iostream>
-#include "fraction.h"
+#include "../include/fraction.h"
 
 /**
  * @brief Демонстрация работы библиотеки дробей
